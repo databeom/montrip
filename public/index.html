@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: grey;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-image: url('img.png');
+      background-size: cover;
+      text-align: center;
+      height: 900px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+    }
+
+    .form-container {
+      background-color: white;
+      height: 300px;
+      width: 300px;
+      justify-content: center;
+      border: 2px solid black;
+      position: absolute;
+      top: 64%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <form id="urlForm" action="/generate" method="post" class="form-inline center" role="form">
+        <label for="value1">상권코드</label>
+        <input type="text" id="value1" name="value1">
+        <label for="value2">월세(만원)</label>
+        <input type="text" id="value2" name="value2">
+        <label for="value3">보증금(만원):</label>
+        <input type="text" id="value3" name="value3">
+        <input type="submit" value="매물 검색하기">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
